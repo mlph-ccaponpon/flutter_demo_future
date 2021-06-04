@@ -35,7 +35,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   Future<List<User>> _getUsers() async {
     var data = await http.get(Uri.parse(
-        'http://www.json-generator.com/api/json/get/cecVjcvtpe?indent=2'));
+        'http://www.json-generator.com/api/json/get/cecVjcvtpe?indent=2')); //TODO: replace this with your JSON data URL
 
     var jsonData = json.decode(data.body);
 
