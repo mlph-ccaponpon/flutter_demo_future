@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     for (var u in jsonData) {
       User user =
-          User(u["index"], u["about"], u["name"], u["email"], u["picture"]);
+          User(u['index'], u['about'], u['name'], u['email'], u['picture']);
 
       users.add(user);
     }
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             print(snapshot.data);
             if (snapshot.data == null) {
-              return Container(child: Center(child: Text("Loading...")));
+              return Container(child: Center(child: Text('Loading...')));
             } else {
               return ListView.builder(
                 itemCount: snapshot.data.length,
